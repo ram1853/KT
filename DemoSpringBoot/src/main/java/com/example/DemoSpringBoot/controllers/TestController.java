@@ -5,10 +5,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.env.Environment;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
 //http://localhost:8080/customGetMethod/1 => URI, 1 => Path parameter
 @RestController //jackson library
 @RequestMapping("/") //get,post,put,delete...all http methods.
@@ -23,8 +21,8 @@ public class TestController {
     @Value("${employee.name}")
     private String name;
 
-    @GetMapping("customeGetMethod") //URI (resource) & URL (bla..google.com)
-    public MyModel getTestMethod(){
+    @GetMapping("customeGetMethod/{id}") //URI (resource) & URL (bla..google.com)
+    public MyModel getTestMethod(@PathVariable("id") String xyzz){
         MyModel myModel = new MyModel("test data");
         System.out.println("reading property--->"+environment.getProperty("employee.location"));
         System.out.println("reading property--->"+name);

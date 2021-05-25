@@ -32,7 +32,12 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="DemoSpringBootApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -67,13 +72,17 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="184" y="90" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1621789894716">
+    <state x="184" y="90" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1621959392692">
       <screen x="0" y="25" width="1440" height="813" />
     </state>
-    <state x="184" y="90" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.1440.813@0.25.1440.813" timestamp="1621789894716" />
+    <state x="184" y="90" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.1440.813@0.25.1440.813" timestamp="1621959392692" />
     <state x="533" y="119" key="#com.intellij.ide.util.MemberChooser" timestamp="1621879493366">
       <screen x="0" y="25" width="1440" height="813" />
     </state>
     <state x="533" y="119" key="#com.intellij.ide.util.MemberChooser/0.25.1440.813@0.25.1440.813" timestamp="1621879493366" />
+    <state x="458" y="182" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1621965133239">
+      <screen x="0" y="25" width="1440" height="813" />
+    </state>
+    <state x="458" y="182" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.25.1440.813@0.25.1440.813" timestamp="1621965133239" />
   </component>
 </project>
