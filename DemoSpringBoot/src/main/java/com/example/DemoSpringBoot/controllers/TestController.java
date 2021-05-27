@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.env.Environment;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.reactive.function.client.WebClient;
 
 //http://localhost:8080/customGetMethod/1 => URI, 1 => Path parameter
 @RestController //jackson library
@@ -13,13 +14,16 @@ import org.springframework.web.bind.annotation.*;
 public class TestController {
 
     @Autowired
-    Environment environment;
+    Environment environment; //bean
 
     @Autowired
     CustomConfig customConfig;
 
     @Value("${employee.name}")
     private String name;
+
+    @Autowired
+    WebClient.Builder webClientBuilder;
 
     @GetMapping("customeGetMethod/{id}") //URI (resource) & URL (bla..google.com)
     public MyModel getTestMethod(@PathVariable("id") String xyzz){
@@ -34,5 +38,16 @@ public class TestController {
     @PostMapping("/xyz")
         public String postTestMethod(){
             return "my post method";
+        }
+
+        @GetMapping("communicateToMS2")
+        public String getDataFromMS2(){
+            return webClientBuilder
+                    .build()
+                    .get()
+                    .uri("http://MICROSERVICE2/ms2")
+                    .retrieve()
+                    .bodyToMono(String.class) //asynchronous
+                    .block(); //synchronous
         }
 }
